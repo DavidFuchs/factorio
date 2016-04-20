@@ -2,9 +2,9 @@ FROM busybox
 
 MAINTAINER David Fuchs <david@davidfuchs.ca>
 
-RUN  apt-get update \
-  && apt-get install -y wget \
-  && rm -rf /var/lib/apt/lists/*
+#RUN  apt-get update \
+  #&& apt-get install -y wget \
+  #&& rm -rf /var/lib/apt/lists/*
 
 RUN  wget -q -O - https://www.factorio.com/download-headless/stable \
    | grep -o -m1 "/get-download/.*/headless/linux64" \
