@@ -14,6 +14,7 @@ RUN  wget -q -O - https://www.factorio.com/download-headless/stable \
   && rm -rf /tmp/factorio.tar.gz
 
 ADD factorio /opt/factorio/
+RUN chmod 0755 /opt/factorio/factorio
 
 WORKDIR /opt/factorio
 CMD ["./factorio"]
