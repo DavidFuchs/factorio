@@ -2,7 +2,9 @@ FROM busybox
 
 MAINTAINER David Fuchs <david@davidfuchs.ca>
 
-RUN apt install wget
+RUN ipkg update
+RUN ipkg install wget
+#RUN apt install wget
 #RUN  apt-get update \
   #&& apt-get install -y wget \
   #&& rm -rf /var/lib/apt/lists/*
