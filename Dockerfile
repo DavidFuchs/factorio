@@ -16,5 +16,9 @@ RUN  wget -q -O - https://www.factorio.com/download-headless/stable \
 ADD factorio /opt/factorio/
 RUN chmod 0755 /opt/factorio/factorio
 
+ENV FACTORIO_SAVE savegame
+
+VOLUME /opt/factorio/saves
+
 WORKDIR /opt/factorio
 CMD ["./factorio"]

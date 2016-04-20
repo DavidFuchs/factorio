@@ -1,8 +1,8 @@
 #!/bin/bash
 
-if [ ! -f /opt/factorio/saves/savegame.zip ]; then
+if [ ! -f /opt/factorio/saves/${FACTORIO_SAVE}.zip ]; then
   echo "No save game found; creating savegame.zip."
-  /opt/factorio/bin/x64/factorio --create savegame
+  /opt/factorio/bin/x64/factorio --create ${FACTORIO_SAVE}
 fi
 
-/opt/factorio/bin/x64/factorio --start-server savegame
+/opt/factorio/bin/x64/factorio --start-server ${FACTORIO_SAVE}
