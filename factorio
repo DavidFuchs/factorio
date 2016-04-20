@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ ! -f /opt/factorio/saves/savegame.zip ]; then
+  echo "No save game found; creating savegame.zip."
+  /opt/factorio/bin/x64/factorio --create savegame
+fi
+
+/opt/factorio/bin/x64/factorio --start-server savegame
