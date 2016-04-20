@@ -19,7 +19,7 @@ RUN chmod 0755 /opt/factorio/factorio
 ENV FACTORIO_SAVE savegame
 
 VOLUME /opt/factorio/saves
-EXPOSE -p 34197
+EXPOSE 34197
 
 WORKDIR /opt/factorio
 CMD ["./factorio"]
