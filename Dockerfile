@@ -16,7 +16,7 @@ RUN  wget -q -O - https://www.factorio.com/download-headless/stable \
 ADD factorio /opt/factorio/
 RUN chmod 0755 /opt/factorio/factorio
 
-ENV FACTORIO_SAVE savegame
+ENV FACTORIO_SAVE /opt/factorio/saves/savegame.zip
 
 VOLUME /opt/factorio/saves
 EXPOSE 34197/udp
